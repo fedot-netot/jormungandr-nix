@@ -19,6 +19,7 @@
 , cardanoWallet
 , rewardsLog ? false
 , enableWallet ? false
+, maxConnections ? null
 , ...
 }@args:
 let
@@ -62,6 +63,8 @@ in let
       listen_address = listenAddress;
     } // lib.optionalAttrs (publicAddress != null) {
       public_address = publicAddress;
+    } // lib.optionalAttrs (maxConnections != null) {
+      max_connections = maxConnections;
     };
   };
   configAttrsGelf = configAttrs // {
