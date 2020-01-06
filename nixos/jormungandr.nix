@@ -143,7 +143,7 @@ in {
       };
 
       policyQuarantineDuration = mkOption {
-        type = types.str;
+        type = types.nullOr types.str;
         default = "30m";
         description = ''
           Time a node is quarantined before being allowed to reconnect
@@ -151,7 +151,7 @@ in {
       };
 
       maxUnreachableNodes = mkOption {
-        type = types.int;
+        type = types.nullOr types.int;
         default = 20;
         description = ''
           Number of nodes that aren't public we will allow our node to connect
@@ -312,12 +312,13 @@ in {
             topics_of_interest = cfg.topicsOfInterest;
             listen_address = cfg.listenAddress;
             max_connections = cfg.maxConnections;
-            policy = {
-              quarantine_duration = cfg.policyQuarantineDuration;
-            };
             max_unreachable_nodes_to_connect_per_event = cfg.maxUnreachableNodes;
           } // optionalAttrs (cfg.topologyForceResetInterval != null) {
             topology_force_reset_interval = cfg.topologyForceResetInterval;
+          } // optionalAttrs (cfg.policyQuarantineDuration != null) {
+            policy = {
+              quarantine_duration = cfg.policyQuarantineDuration;
+            };
           };
         } // optionalAttrs cfg.enableExplorer {
           explorer = {
