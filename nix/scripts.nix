@@ -34,9 +34,9 @@ in let
   stakingFile = if (stakingFile' != null) then stakingFile' else "./secret.yaml";
   httpHost = "http://${restListen}/api";
   logConfig = {
-    level = "info";
+    level = "warn";
     format = "plain";
-    output = if sendLogs then "gelf" else "stderr";
+    output = if sendLogs then "gelf" else "journald";
     backend = "monitoring.stakepool.cardano-testnet.iohkdev.io:12201";
     id = null;
   } // logConfig';
