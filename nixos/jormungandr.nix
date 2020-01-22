@@ -156,6 +156,9 @@ in {
       gossipInterval = mkOption {
         type = types.nullOr types.str;
         default = null;
+        description = ''
+          Interval to start gossiping with new nodes. Default value is `10s`.
+        '';
       };
 
       topologyForceResetInterval = mkOption {
