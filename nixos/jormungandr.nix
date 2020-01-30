@@ -322,6 +322,8 @@ in {
             policy = {
               quarantine_duration = cfg.policyQuarantineDuration;
             };
+          } // optionalAttrs (cfg.gossipInterval != null) {
+            gossip_interval = cfg.gossipInterval;
           };
         } // optionalAttrs cfg.enableExplorer {
           explorer = {
