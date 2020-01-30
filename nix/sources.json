@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "iohk-nix": {
-        "branch": "jormungandr/0.8.8",
+        "branch": "jormungandr/0.8.9",
         "description": "nix scripts shared across projects",
         "homepage": null,
         "owner": "input-output-hk",
         "repo": "iohk-nix",
-        "rev": "8311b093f2e9f704a763b84d6f16a8a516395c6d",
-        "sha256": "04d35xdyxmv2yi6mv06pjf2dfwdv0h5933bz662p194srcj8vbvb",
+        "rev": "976ba9f5a32eae99e0f5d0a3d521bc97a50d6caf",
+        "sha256": "07vw7khk1hh139a1jsc17ksrzriyadxvvqan43ljfcg4ps7i8rp1",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/8311b093f2e9f704a763b84d6f16a8a516395c6d.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/976ba9f5a32eae99e0f5d0a3d521bc97a50d6caf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
