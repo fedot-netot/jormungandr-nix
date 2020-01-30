@@ -321,6 +321,8 @@ in {
             max_unreachable_nodes_to_connect_per_event = cfg.maxUnreachableNodes;
           } // optionalAttrs (cfg.topologyForceResetInterval != null) {
             topology_force_reset_interval = cfg.topologyForceResetInterval;
+          } // optionalAttrs (cfg.gossipInterval != null) {
+            gossip_interval = cfg.gossipInterval;
           };
         } // optionalAttrs cfg.enableExplorer {
           explorer = {
