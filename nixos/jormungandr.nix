@@ -156,6 +156,7 @@ in {
       gossipInterval = mkOption {
         type = types.nullOr types.str;
         default = null;
+        example = "10s";
         description = ''
           Interval to start gossiping with new nodes. Default value is `10s`.
         '';
