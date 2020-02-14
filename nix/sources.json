@@ -41,10 +41,10 @@
         "homepage": null,
         "owner": "fedot-netot",
         "repo": "iohk-nix",
-        "rev": "5b6790a3a4b6cea0c9c2fc42d0df1a00568c0872",
-        "sha256": "1svmqiq60j47in5p79q6zdx8n68j8wij0xpw5rhji6r75wqm18hh",
+        "rev": "513ab955b06c3cccfa34dc964a2ed0ebee48c273",
+        "sha256": "1vhawsxnm88nppalldyzhr9pwshawgmn1bngrrdx4h8yxaqjaqkc",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/5b6790a3a4b6cea0c9c2fc42d0df1a00568c0872.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/513ab955b06c3cccfa34dc964a2ed0ebee48c273.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
