@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "iohk-nix": {
-        "branch": "feature/v0.8.10",
+        "branch": "feature/back-to-jorm-0.8.8",
         "description": "nix scripts shared across projects",
         "homepage": null,
         "owner": "fedot-netot",
         "repo": "iohk-nix",
-        "rev": "5b6790a3a4b6cea0c9c2fc42d0df1a00568c0872",
-        "sha256": "1svmqiq60j47in5p79q6zdx8n68j8wij0xpw5rhji6r75wqm18hh",
+        "rev": "0e0e63512f276454ea4be28553c9e560153307fd",
+        "sha256": "0kz37jqpw9a7rgbj9jnb8bk2jjigwnvczx9s2ixb2n4a921918zs",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/5b6790a3a4b6cea0c9c2fc42d0df1a00568c0872.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/0e0e63512f276454ea4be28553c9e560153307fd.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
