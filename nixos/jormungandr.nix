@@ -162,6 +162,15 @@ in {
         '';
       };
 
+      skipBootstrap = mkOption {
+        type = types.bool;
+        default = false;
+        example = "false";
+        description = ''
+          Enable skip bootstrapping process
+        '';
+      };
+
       topologyForceResetInterval = mkOption {
         type = types.nullOr types.str;
         default = null;
@@ -330,6 +339,8 @@ in {
           explorer = {
             enabled = true;
           };
+        } // optionalAttrs cfg.skipBootstrap {
+          skip_bootstrap = true;
         }));
         secretsArgs = concatMapStrings (p: " --secret \"${p}\"") cfg.secrets-paths;
       in ''
