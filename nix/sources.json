@@ -36,15 +36,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "iohk-nix": {
-        "branch": "feature/v0.8.14",
+        "branch": "feature/v0.8.15",
         "description": "nix scripts shared across projects",
         "homepage": null,
         "owner": "fedot-netot",
         "repo": "iohk-nix",
-        "rev": "8228eab28a4608fa9dbca810d71c05c14fbd9281",
-        "sha256": "0ddj82xp3l860vkf98h8qqc75ppbkbf1b17hh5d0nicj1v9m45sa",
+        "rev": "0b735f4cee8000e7f20f18ab0ba0ac32f2291fcc",
+        "sha256": "1qnhdyr32zzig3rry1rbjpm2ggc51r4d5p95m6163512az9pi915",
         "type": "tarball",
-        "url": "https://github.com/input-output-hk/iohk-nix/archive/8228eab28a4608fa9dbca810d71c05c14fbd9281.tar.gz",
+        "url": "https://github.com/input-output-hk/iohk-nix/archive/0b735f4cee8000e7f20f18ab0ba0ac32f2291fcc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "js-chain-libs": {
