@@ -20,6 +20,7 @@ ADDRESSES = os.getenv('MONITOR_ADDRESSES', '').split()
 NODE_METRICS = [
     "blockRecvCnt",
     "connections",
+    "lastBlockContentSize",
     "lastBlockDate",
     "lastBlockEpoch",
     "lastBlockFees",
@@ -29,11 +30,13 @@ NODE_METRICS = [
     "lastBlockSum",
     "lastBlockTime",
     "lastBlockTx",
+    "peerAvailableCnt",
+    "peerConnectedCnt",
+    "peerQuarantinedCnt",
+    "peerTotalCnt",
     "recvq",
     "txRecvCnt",
     "uptime",
-    "peerAvailableCnt",
-    "peerQuarantinedCnt",
     "peerUnreachableCnt"
 ]
 PIECE_METRICS = [
@@ -116,6 +119,8 @@ def process_jormungandr_metrics():
         log.info(f'failed to parse lastBlockDate into pieces')
 
     for metric, gauge in jormungandr_metrics.items():
+        if metric not in metrics:
+            metrics[metric] = NaN
         gauge.set(sanitize(metrics[metric]))
 
     # Process pieced metrics from jcli parent metrics
