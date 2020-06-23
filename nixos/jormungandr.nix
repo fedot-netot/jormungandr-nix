@@ -15,13 +15,6 @@ let
           /ip4/127.0.0.1/tcp/8080 or /ip6/::1/tcp/8080
         '';
       };
-
-      id = mkOption {
-        type = types.str;
-        description = ''
-          public key of the node
-        '';
-      };
     };
   };
 in {
@@ -288,6 +281,11 @@ in {
         '';
       };
 
+      allowPrivateAddresses = mkOption {
+        type = types.nullOr types.bool;
+        default = true;
+      };
+
       rest.listenAddress = mkOption {
         type = types.nullOr types.str;
         default = "127.0.0.1:8607";
@@ -365,7 +363,6 @@ in {
       script = let
         mapPeers = map (peer: {
           address = peer.address;
-          id = peer.id;
         });
 
         configJson = builtins.toFile "config.yaml" (builtins.toJSON ({
@@ -400,6 +397,8 @@ in {
                 peers = mapPeers cfg.layers.preferredList.peers;
               };
             };
+
+            allow_private_addresses = cfg.allowPrivateAddresses;
 
             topics_of_interest = cfg.topicsOfInterest;
             listen_address = cfg.listenAddress;
